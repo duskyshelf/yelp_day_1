@@ -14,3 +14,16 @@ Started GET "/restaurants" for 127.0.0.1 at 2015-07-20 13:57:22 +0100
   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
 Started GET "/restaurants" for 127.0.0.1 at 2015-07-20 14:03:21 +0100
   [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Started GET "/restaurants" for 127.0.0.1 at 2015-07-20 14:06:39 +0100
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/restaurants" for 127.0.0.1 at 2015-07-20 14:07:49 +0100
+Processing by RestaurantsController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/restaurants" for 127.0.0.1 at 2015-07-20 14:12:18 +0100
+Processing by RestaurantsController#index as HTML
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK

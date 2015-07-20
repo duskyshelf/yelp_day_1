@@ -6,4 +6,3 @@ run Rails.application
 --color
 --format documentation
 --require spec_helper
--fd
