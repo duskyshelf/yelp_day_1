@@ -27,3 +27,15 @@ Started GET "/restaurants" for 127.0.0.1 at 2015-07-20 14:12:18 +0100
 Processing by RestaurantsController#index as HTML
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
   [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/restaurants" for 127.0.0.1 at 2015-07-20 14:31:55 +0100
+Processing by RestaurantsController#index as HTML
+  Rendered restaurants/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1312ms (Views: 1304.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/restaurants" for 127.0.0.1 at 2015-07-20 14:34:46 +0100
+Processing by RestaurantsController#index as HTML
+  Rendered restaurants/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 133ms (Views: 125.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
