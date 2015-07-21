@@ -1462,3 +1462,36 @@ DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`
   [1m[36mReview Load (0.7ms)[0m  [1mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT 1[0m  [["id", 4]]
   [1m[35mReview Load (0.4ms)[0m  SELECT  "reviews".* FROM "reviews" WHERE "reviews"."thoughts" = $1 LIMIT 1  [["thoughts", "potato"]]
   [1m[36mReview Load (0.6ms)[0m  [1mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."thoughts" = $1 LIMIT 1[0m  [["thoughts", "s"]]
+
+
+Started GET "/restaurants" for ::1 at 2015-07-21 15:13:27 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "restaurants"
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mReview Exists (0.7ms)[0m  SELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 1]]
+  [1m[35mReview Exists (0.3ms)[0m  SELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 2]]
+  [1m[36mReview Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1[0m  [["restaurant_id", 3]]
+  [1m[35mReview Exists (0.4ms)[0m  SELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 4]]
+  [1m[36mReview Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1[0m  [["restaurant_id", 5]]
+  [1m[35mReview Exists (0.2ms)[0m  SELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 6]]
+  [1m[36mReview Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1[0m  [["restaurant_id", 8]]
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1  [["restaurant_id", 8]]
+  Rendered restaurants/index.html.haml within layouts/application (105.2ms)
+Completed 200 OK in 516ms (Views: 484.4ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/restaurants/new" for ::1 at 2015-07-21 15:13:32 +0100
+Processing by RestaurantsController#new as HTML
+  Rendered restaurants/new.html.haml within layouts/application (18.9ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for ::1 at 2015-07-21 15:13:39 +0100
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WG20BdixOMx4Pml5jCPZZU0rFF7DdHRG25OwBCxBpmWellhGm2/Me7+H0D3x+yJ3zhdyxPf8h6FZ6ly5seDlRw==", "restaurant"=>{"name"=>"hj"}, "commit"=>"Create Restaurant"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  Rendered restaurants/new.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.5ms)
